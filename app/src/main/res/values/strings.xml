@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MyAnixart</string>
+    <string name="search_anime">Поиск аниме</string>
+    <string name="popular">Популярное</string>
+    <string name="schedule">Расписание</string>
+    <string name="collections">Коллекции</string>
+    <string name="filter">Фильтр</string>
+    <string name="random">Рандом</string>
+    <string name="recommendation">Рекомендации</string>
+    <string name="on_user_ratings">На основе ваших оценок</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
