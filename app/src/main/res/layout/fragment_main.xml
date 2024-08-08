@@ -4,140 +4,140 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/dark_gray"
-    android:padding="8dp"
-    tools:context=".MainFragment">
 
-
-
-    <LinearLayout
-        android:id="@+id/search_container"
-        android:layout_width="268dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/shape_search_container"
-        android:orientation="horizontal"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_gray"
         android:padding="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:context=".MainFragment">
 
-        <ImageView
-            android:layout_width="wrap_content"
+
+        <LinearLayout
+            android:id="@+id/search_container"
+            android:layout_width="268dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_margin="8dp"
-            android:src="@drawable/ic_search" />
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_search_container"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/search_anime"
-            android:textColor="@color/white"
-            android:textColorHint="@color/light_gray"
-            android:textSize="20sp" />
-    </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_search" />
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/imgBtnSettings"
-        style="@style/Image.Button"
-        android:src="@drawable/ic_settings"
-        app:layout_constraintStart_toEndOf="@id/search_container"
-        app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/search_anime"
+                android:textColor="@color/white"
+                android:textColorHint="@color/light_gray"
+                android:textSize="20sp" />
+        </LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/imgBtnNotification"
-        style="@style/Image.Button"
-        android:src="@drawable/ic_notifications"
-        app:layout_constraintStart_toEndOf="@id/imgBtnSettings"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/imgBtnSettings"
+            style="@style/Image.Button"
+            android:src="@drawable/ic_settings"
+            app:layout_constraintStart_toEndOf="@id/search_container"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvAds"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/search_container"
-        tools:listitem="@layout/item_ads" />
-
-    <RelativeLayout
-        android:id="@+id/container_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rvAds">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/first_column"
-            style="@style/Material.Button"
-            android:layout_alignParentStart="true"
-            android:text="@string/popular" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/second_column"
-            style="@style/Material.Button"
-            android:layout_alignParentEnd="true"
-            android:text="@string/schedule" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/first_column_second_row"
-            style="@style/Material.Button"
-            android:layout_below="@id/first_column"
-            android:layout_alignParentStart="true"
-            android:text="@string/collections" />
-
-        <com.google.android.material.button.MaterialButton
-            style="@style/Material.Button"
-            android:layout_below="@id/second_column"
-            android:layout_alignParentEnd="true"
-            android:text="@string/filter" />
-
-        <com.google.android.material.button.MaterialButton
-            style="@style/Material.Button"
-            android:layout_below="@id/first_column_second_row"
-            android:layout_alignParentStart="true"
-            android:text="@string/random" />
-
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/container_btn">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/recommendation"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/on_user_ratings"
-            android:textColor="@color/light_gray"
-            android:textSize="16sp" />
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/imgBtnNotification"
+            style="@style/Image.Button"
+            android:src="@drawable/ic_notifications"
+            app:layout_constraintStart_toEndOf="@id/imgBtnSettings"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvRec"
-            android:layout_width="wrap_content"
+            android:id="@+id/rvAds"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:spanCount="2"
-            tools:listitem="@layout/item_recommendation" />
-    </LinearLayout>
+            android:layout_marginTop="28dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_container"
+            tools:listitem="@layout/item_ads" />
+
+        <RelativeLayout
+            android:id="@+id/container_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvAds">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/first_column"
+                style="@style/Material.Button"
+                android:layout_alignParentStart="true"
+                android:text="@string/popular" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/second_column"
+                style="@style/Material.Button"
+                android:layout_alignParentEnd="true"
+                android:text="@string/schedule" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/first_column_second_row"
+                style="@style/Material.Button"
+                android:layout_below="@id/first_column"
+                android:layout_alignParentStart="true"
+                android:text="@string/collections" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Material.Button"
+                android:layout_below="@id/second_column"
+                android:layout_alignParentEnd="true"
+                android:text="@string/filter" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Material.Button"
+                android:layout_below="@id/first_column_second_row"
+                android:layout_alignParentStart="true"
+                android:text="@string/random" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/container_btn">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recommendation"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/on_user_ratings"
+                android:textColor="@color/light_gray"
+                android:textSize="16sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                tools:listitem="@layout/item_recommendation" />
+        </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
